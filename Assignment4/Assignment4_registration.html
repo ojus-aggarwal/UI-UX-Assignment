@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register - Thaparlympics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="Assignment4_style.css">
+</head>
+<body>
+  <header>
+    <h1>Register for Thaparlympics</h1>
+    <nav>
+      <a href="Assignment4_Homepage.html">Homepage</a>
+      <a href="Assignment4_eventsandteams.html">Events</a>
+      <a href="Assignment4_schedule.html">Schedule</a>
+      <a class="currentpage" href="Assignment4_registration.html">Register</a>
+      <a href="Assignment4_gallery.html">Gallery</a>
+      <a href="Assignment4_contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Participant Registration Form</h2>
+    <form>
+      <label for="name">Full Name</label>
+      <input id="name" name="name" type="text" required placeholder="e.g., A. Sharma">
+
+      <label for="branch">Branch</label>
+      <input id="branch" name="branch" type="text" required placeholder="e.g., ECE">
+
+      <p style="margin-top:6px;"><strong>Select Sports (multiple allowed):</strong></p>
+      <div role="group" aria-label="Sports selection">
+        <label><input type="checkbox" name="sports" value="Football">Football</label>
+        <label><input type="checkbox" name="sports" value="Basketball">Basketball</label>
+        <label><input type="checkbox" name="sports" value="Table Tennis">Table Tennis</label>
+        <label><input type="checkbox" name="sports" value="Badminton">Badminton</label>
+        <label><input type="checkbox" name="sports" value="Lawn Tennis">Lawn Tennis</label>
+        <label><input type="checkbox" name="sports" value="Track & Field">Track &amp; Field</label>
+        <label><input type="checkbox" name="sports" value="Cricket">Cricket</label>
+      </div>
+
+      <input type="submit" value="Submit Registration">
+    </form>
+  </section>
+
+  <footer>&copy; 2025 Thaparlympics | Thapar Institute</footer>
+</body>
+</html>

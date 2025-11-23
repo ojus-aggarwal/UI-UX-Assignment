@@ -1,0 +1,209 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+body {
+  background: #f8f9fc;
+  color: #333;
+  line-height: 1.65;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+header {
+  background: #003366;
+  color: #fff;
+  padding: 24px 16px;          
+  border-bottom: 4px solid #ffcc00;
+}
+header h1 { margin-bottom: 6px; letter-spacing: .5px; }
+header p { opacity: 0.9; }
+
+nav {
+  margin-top: 10px;
+  display: flex;                 
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 12px;             
+  border-radius: 999px;
+}
+nav a:hover {          
+  background: #ffcc00;
+  color: #001a33;
+}
+.currentpage{  
+  background: #ffcc00;
+  color: #001a33;
+}
+
+section {
+  padding: 32px 18px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section h2 {
+  margin-bottom: 18px;
+  color: #003366;
+  position: relative;
+}
+section h2::after {            
+  content: "";
+  display: block;
+  height: 4px;
+  width: 80px;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg,#ffcc00,#ffd84d);
+  border-radius: 6px;
+}
+
+ul {
+  list-style: square;
+  padding-left: 20px;
+  margin: 0 auto;
+  text-align: left;
+  max-width: 700px;
+}
+table {
+  width: min(900px, 95%);
+  margin: 20px auto;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+}
+th, td { padding: 14px 12px; text-align: center; }
+th { background: #003366; color: #fff; }
+tr td {         
+  background: #f0f4fb;
+}
+tr:hover td { background: #fff8d6; }
+
+form {
+  max-width: 580px;
+  margin: 22px auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 8px;
+  font-size: 17px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #d9e2f1;
+  border-radius: 10px;
+  outline: none;
+}
+input[required], select[required] { 
+  border-color: #b7c7e8;
+}
+input:focus {
+  border-color: #003366;
+  box-shadow: 0 0 0 4px rgba(0,51,102,.12);
+}
+input[type="checkbox"] { transform: scale(1.15); }
+input[type="submit"], button {
+  width: 100%;
+  padding: 12px 16px;
+  background: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+input[type="submit"]:hover { background: #ffcc00; color: #001a33; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 6px;
+}
+.gallery figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform .35s ease;
+}
+.gallery figure:hover img { transform: scale(1.06); }
+.gallery figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 10px 12px;
+  background: linear-gradient(180deg,transparent,rgba(0,0,0,.6));
+  color: #fff;
+  font-weight: 600;
+}
+
+.hero {
+  display: flex;               
+  gap: 24px;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero .hero-card {
+  flex: 1 1 320px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  
+}
+.hero video, .hero iframe, .hero img {
+  width: 100%;
+  border-radius: 12px;
+  outline: 4px solid rgba(255,204,0,.35);
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  background: #e9f0ff;
+  color: #003366;
+  border: 1px solid #c8d8ff;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  background: #003366;
+  color: #fff;
+  padding: 18px;
+  margin-top: 28px;
+}
+
+/* ===== Media Queries (responsiveness) ===== */
+@media (max-width: 720px) {
+  header { padding: 20px 12px; }
+  nav { gap: 8px; }
+  section { padding: 24px 14px; }
+  table { font-size: .95rem; }
+}
+@media (max-width: 430px) {
+  nav a { padding: 6px 10px; font-size: .92rem; }
+  .badge { display: block; margin: 8px auto 0; }
+}
