@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Booking - Map It!</title>
+    <style>
+        body { background-color: azure; font-family: Arial, sans-serif; margin: 30px; }
+        h1 { text-align: center; }
+        form { width: 50%; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 10px gray; }
+        label { display: block; margin: 10px 0 5px; }
+        input, select, textarea { width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #aaa; border-radius: 5px; }
+        button { background: darkblue; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+        nav { text-align: center; margin-bottom: 30px; }
+        nav a { margin: 0 15px; text-decoration: none; font-weight: bold; color: darkblue; }
+    </style>
+</head>
+<body>
+    <h1>Book Your Trip</h1>
+    <nav>
+        <a href="Assignment2_home.html">Home</a>
+        <a href="Assignment2_packages.html">Packages</a>
+        <a href="Assignment2_booking.html">Booking</a>
+        <a href="Assignment2_gallery.html">Gallery</a>
+        <a href="Assignment2_contact.html">Contact</a>
+    </nav>
+
+    <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="date">Travel Dates:</label>
+        <input type="date" id="date" required>
+
+        <label for="destination">Destination:</label>
+        <select id="destination" required>
+            <option>-----Select-----</option>
+            <option>Maldives</option>
+            <option>Europe</option>
+            <option>Dubai</option>
+        </select>
+
+        <label for="package">Select Package:</label>
+        <select id="package" required>
+            <option>-----Select-----</option>
+            <option>Beach Paradise</option>
+            <option>European Explorer</option>
+            <option>Desert Adventure</option>
+        </select>
+
+        <button type="submit">Submit Booking</button>
+    </form>
+</body>
+</html>
